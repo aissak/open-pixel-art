@@ -7,9 +7,9 @@ const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
 const pixelFilePath = path.join('_data', 'pixels.json');
-
+//file path
 readFile(pixelFilePath, { encoding: 'utf8' })
-  .then(pixelFileData => {
+  .then((pixelFileData) => {
     const pixels = JSON.parse(pixelFileData);
 
     const sortedPixelString = pixelsToString(sortPixels(pixels));
